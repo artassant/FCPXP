@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Causal Perception Experiment - Trial</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="page-title">Causal Perception Experiment</h1>
+
+    <div id="experiment-section" class="card">
+      <h2 id="welcome"></h2>
+      <p id="trial-status"></p>
+      <div id="sketch-holder"></div>
+    </div>
+
+    <div id="download-section" class="card" style="display:none; margin-top: 20px;">
+      <h3>Thank you for participating!</h3>
+      <button id="download-btn">Download Your Results</button>
+    </div>
+  </div>
+
+  <!-- p5 “sketch” bootstrap lives in js/main.js -->
+  <script type="module" src="js/main.js" defer></script>
+</body>
+</html>

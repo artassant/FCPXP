@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 800px;
+  width: 90%;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  background: #2a5298;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, #00b894, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h2 { font-size: 1.8em; margin: 15px 0; color: #e0e0e0; }
+h3 { font-size: 1.5em; margin: 15px 0; color: #b0e0e6; }
+
+input, select {
+  padding: 12px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 280px;
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+input::placeholder, select::placeholder { color: #d0d0d0; }
+input:focus, select:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 184, 148, 0.5);
+}
+select#gender { display: inline-block; vertical-align: middle; }
+select#gender + small { display: block; margin-top: 4px; color: #d0d0d0; }
+
+button {
+  background: linear-gradient(45deg, #00b894, #00d4ff);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  margin-top: 15px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+button:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0, 184, 148, 0.6); }
+
+#experiment-section, #download-section { margin-top: 40px; animation: slideIn 0.5s ease-in-out; }
+
+canvas {
+  display: block;
+  margin: 20px auto;
+  border: 3px solid #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#trial-status { margin-top: 15px; font-size: 1.2em; color: #d0d0d0; letter-spacing: 0.5px; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-20px);} to { opacity:1; transform: translateY(0);} }
+@keyframes slideIn { from { opacity: 0; transform: translateX(-20px);} to { opacity:1; transform: translateX(0);} }
+
+@media (max-width: 600px) {
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.5em; }
+  input, select { width: 100%; max-width: 300px; }
+  .container { padding: 20px; }
+}

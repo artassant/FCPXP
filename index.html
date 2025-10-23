@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Causal Perception Experiment</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- p5.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="page-title">Causal Perception Experiment</h1>
+
+    <!-- Participant Information Form -->
+    <div id="form-section" class="card">
+      <h2>Participant Information</h2>
+      <form id="participant-form" aria-label="Participant Information Form">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" placeholder="Enter your name" required aria-required="true"/><br />
+        <label for="age">Age:</label><br />
+        <input type="number" id="age" placeholder="Enter your age" min="1" required aria-required="true" /><br />
+        <label for="gender">Gender:</label><br />
+        <select id="gender" required aria-required="true" aria-describedby="genderHelp">
+          <option value="" disabled selected>Select gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        <small id="genderHelp" class="sr-only">Select your gender from the dropdown list</small><br />
+        <button type="submit" id="start-btn">Start Experiment</button>
+      </form>
+    </div>
+
+    <!-- A simple note -->
+    <div class="card">
+      <p>When you click “Start Experiment”, a new tab will open with the task.</p>
+    </div>
+  </div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
